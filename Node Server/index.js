@@ -1,6 +1,6 @@
 const io = require("socket.io")(8000, {
     cors: {
-        origin: "https://your-vercel-site.vercel.app",
+        origin: "https://deba-004.github.io",
         methods: ["GET", "POST"]
     }
 });
