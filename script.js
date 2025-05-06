@@ -5,7 +5,7 @@ const messageContainer=document.querySelector(".container");
 const input=document.getElementById("input");
 const button=document.getElementById("send-button");
 
-var audio=new Audio("/Media/message_sound.mp3")
+var audio=new Audio("Media/message_sound.mp3")
 
 const append=(message,position) => {
     const messageElement=document.createElement("div");
