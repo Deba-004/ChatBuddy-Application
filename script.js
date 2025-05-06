@@ -1,4 +1,4 @@
-const socket=io("http://localhost:8000");
+const socket=io("https://chatbuddy-application.onrender.com");
 
 const form=document.getElementById("sendBox");
 const messageContainer=document.querySelector(".container");
