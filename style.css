@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+    height: 100vh;
+    font-family: "Outfit", sans-serif;
+}
+
+.light {
+    background: linear-gradient(135deg, #a2c7ec, #d9e2ec);
+    color: #e2e8f0;
+    height: 100vh;
+    font-family: "Outfit", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#icon {
+    width: 120px;
+    height: 120px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+#dark-btn,#light-btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.container {
+    border: 2px solid rgb(91, 91, 93);
+    border-radius: 5px;
+    max-width: 955px;
+    height: 65vh;
+    min-height: 300px;
+    margin: auto;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.message {
+    font-size: 1.04rem;
+    border-radius: 5px;
+    max-width: 40%;
+    background: linear-gradient(9deg, #000000, #222222);
+    margin: 0 0 10px 0;
+    padding: 10px;
+}
+
+.right {
+    float: right;
+    clear: both;
+}
+
+.left {
+    float: left;
+    clear: both;
+}
+
+#sendBox {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+#input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.0rem;
+}
+
+#send-button {
+    width: 70px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.05rem;
+    background: linear-gradient(190deg, #2a3235, #020304);
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;
+    font-family: "Outfit", sans-serif;
+}
+
+.horizontal-rule {
+    background-color: hsl(30, 18%, 87%);
+    height: 1.5px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    #dark-btn, #light-btn {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+    }
+
+    #theme-toogle {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        height: 55vh;
+        max-width: 90%;
+        min-height: 250px;
+    }
+
+    #sendBox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #input {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    #send-button {
+        width: 50%;
+    }
+
+    .message {
+        max-width: 70%;
+    }
+}

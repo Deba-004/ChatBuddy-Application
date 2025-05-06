@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBuddy</title>
+    <link rel="icon" href="Media/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="Media/logo.png" alt="icon of  chatbuddy" id="icon">
+            <h1>Welcome to ChatBuddy App</h1>
+            <div id="theme-toogle">
+                <img src="Media/dark.png" alt="dark theme" id="dark-btn">
+                <img src="Media/light.png" alt="light theme" id="light-btn">
+            </div>
+        </nav>
+    </header>
+    <div class="container"></div>
+    <div class="send">
+        <form action="#" id="sendBox">
+            <input type="text" name="input" id="input" placeholder="Message.." required>
+            <button type="submit" id="send-button">Send</button>
+        </form>
+    </div>
+</body>
+</html>
