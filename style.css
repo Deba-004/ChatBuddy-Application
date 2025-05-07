@@ -79,11 +79,14 @@ h1 {
 
 #input {
     width: 50%;
+    height: 20px;
     padding: 10px;
     border-radius: 20px;
     margin-right: 5px;
     font-family: "Outfit", sans-serif;
     font-size: 1.0rem;
+    outline: none;
+    resize: none;
 }
 
 #send-button {
