@@ -76,10 +76,10 @@ socket.on("video-invite-received", ({inviterId}) => {
     const accept=confirm("Someone invited for video chat. Do you want to join?");
     if(accept) {
         socket.emit("accept-invite", inviterId);
-        window.open('video.html?room' + inviterId, "_blank");
+        window.open('video.html?room=' + inviterId, "_blank");
     }
 });
 
 socket.on("invite-accepted", () => {
-    window.open('video.html?room' + inviterId, "_blank");
+    window.open('video.html?room=' + socket.id, "_blank");
 });
