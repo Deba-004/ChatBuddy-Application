@@ -4,7 +4,7 @@ const form=document.getElementById("sendBox");
 const messageContainer=document.querySelector(".container");
 const input=document.getElementById("input");
 const button=document.getElementById("send-button");
-const videochatbtn=document.getElementById("video-chat-button")
+const videochatbtn=document.getElementById("video-chat-button");
 
 var audio=new Audio("Media/message_sound.mp3")
 
@@ -82,4 +82,4 @@ socket.on("video-invite-received", ({inviterId}) => {
 
 socket.on("invite-accepted", () => {
     window.open('video.html?room' + inviterId, "_blank");
-})
+});
