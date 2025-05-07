@@ -67,7 +67,7 @@ lightBtn.addEventListener("click", () => {
     darkBtn.style.display = "inline";
 });
 
-videochatbtn.addEventListener("onclick", () => {
+videochatbtn.addEventListener("click", () => {
     socket.emit("video-invite");
     alert("Request sent! Waiting for someone to join..");
 });
