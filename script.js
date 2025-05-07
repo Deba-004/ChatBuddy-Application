@@ -4,6 +4,7 @@ const form=document.getElementById("sendBox");
 const messageContainer=document.querySelector(".container");
 const input=document.getElementById("input");
 const button=document.getElementById("send-button");
+const videochatbtn=document.getElementById("video-chat-button")
 
 var audio=new Audio("Media/message_sound.mp3")
 
@@ -65,3 +66,20 @@ lightBtn.addEventListener("click", () => {
     lightBtn.style.display = "none";
     darkBtn.style.display = "inline";
 });
+
+videochatbtn.addEventListener("onclick", () => {
+    socket.emit("video-invite");
+    alert("Request sent! Waiting for someone to join..");
+});
+
+socket.on("video-invite-received", ({inviterId}) => {
+    const accept=confirm("Someone invited for video chat. Do you want to join?");
+    if(accept) {
+        socket.emit("accept-invite", inviterId);
+        window.open('video.html?room' + inviterId, "_blank");
+    }
+});
+
+socket.on("invite-accepted", () => {
+    window.open('video.html?room' + inviterId, "_blank");
+})

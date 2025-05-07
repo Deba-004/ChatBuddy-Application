@@ -45,7 +45,7 @@ h1 {
     border: 2px solid rgb(91, 91, 93);
     border-radius: 5px;
     max-width: 955px;
-    height: 65vh;
+    height: 60vh;
     min-height: 300px;
     margin: auto;
     padding: 15px;
@@ -74,7 +74,7 @@ h1 {
 #sendBox {
     display: flex;
     justify-content: center;
-    margin: 30px 0;
+    margin: 20px 0 10px 0;
 }
 
 #input {
@@ -99,6 +99,19 @@ h1 {
     cursor: pointer;
     border: 1px solid black;
     font-family: "Outfit", sans-serif;
+}
+
+#video-chat-button {
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.05rem;
+    background: linear-gradient(190deg, #2a3235, #020304);
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;
+    font-family: "Outfit", sans-serif;
+    display: block;
+    margin: auto;
 }
 
 .horizontal-rule {

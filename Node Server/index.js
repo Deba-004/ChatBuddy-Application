@@ -21,5 +21,13 @@ io.on("connection", socket => {
         const name=users[socket.id];
         socket.broadcast.emit("user-left", name);
         delete users[socket.id];
-    })
+    });
+
+    socket.on("video-invite", () => {
+        socket.broadcast.emit("video-invite-received", {inviterId: socket.id});
+    });
+
+    socket.on("accept-invite", (inviterId) => {
+        io.to(inviterId).emit("invite-accepted");
+    });
 });
