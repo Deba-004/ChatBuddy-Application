@@ -6,6 +6,8 @@ const input=document.getElementById("input");
 const button=document.getElementById("send-button");
 const videochatbtn=document.getElementById("video-chat-button");
 
+console.log("[Server] Video chat feature loaded");
+
 var audio=new Audio("Media/message_sound.mp3")
 
 const append=(message,position) => {
