@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+    height: 100vh;
+    font-family: "Outfit", sans-serif;
+}
+
+.light {
+    background: linear-gradient(135deg, #a2c7ec, #d9e2ec);
+    color: #e2e8f0;
+    height: 100vh;
+    font-family: "Outfit", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#icon {
+    width: 120px;
+    height: 120px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-right: 30px;
+}
+
+#dark-btn,#light-btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+#videos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+video {
+    width: 45%;
+    height: 60vh;
+    border-radius: 12px;
+    border: 2px solid #4a5568;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    #dark-btn, #light-btn {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+    }
+
+    #theme-toogle {
+        margin-bottom: 10px;
+    }
+}

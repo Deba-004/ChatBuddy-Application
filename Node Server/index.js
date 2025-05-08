@@ -30,4 +30,29 @@ io.on("connection", socket => {
     socket.on("accept-invite", (inviterId) => {
         io.to(inviterId).emit("invite-accepted");
     });
+
+    socket.on("join-room", (room) => {
+        const clients=io.sockets.adapter.rooms.get(room);
+        const numClients=clients ? clients.size : 0;
+        if(numClients>=2) {
+            socket.emit("room-full");
+        }
+
+        socket.join(room);
+        if(numClients===1) {
+            socket.to(room).emit("ready");
+        }
+    });
+
+    socket.on("offer", ({offer, room}) => {
+        socket.to(room).emit("offer", offer);
+    });
+
+    socket.on("answer", ({answer, room}) => {
+        socket.to(room).emit("answer", answer);
+    });
+
+    socket.on("ice-candidate", ({candidate, room}) => {
+        socket.to(room).emit("ice-candidate", candidate);
+    });
 });
