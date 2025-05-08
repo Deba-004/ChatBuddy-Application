@@ -82,4 +82,11 @@ video {
     #theme-toogle {
         margin-bottom: 10px;
     }
+
+    #videos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
